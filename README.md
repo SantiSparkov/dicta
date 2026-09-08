@@ -1,7 +1,7 @@
 <p align="center"><img src="src-tauri/icons/dicta.svg" width="96" alt="Dicta" /></p>
 <h1 align="center">dicta.</h1>
 <p align="center"><strong>Tu próximo commit empieza hablando.</strong><br/>Dictado local, gratis y de código abierto para devs de Latinoamérica.</p>
-<p align="center"><a href="https://dicta-dev-latam.bonny-flint-2167.chatgpt.site">Conoce Dicta</a> · <a href="https://github.com/SantiSparkov/dicta/releases/latest">Descargas</a> · <a href="BUILD.md">Compilar</a> · <a href="BRAND.md">Marca</a></p>
+<p align="center"><a href="https://dicta-dev-latam.enzisparki123.chatgpt.site">Conoce Dicta</a> · <a href="https://github.com/SantiSparkov/dicta/releases/latest">Descargas</a> · <a href="BUILD.md">Compilar</a> · <a href="BRAND.md">Marca</a></p>
 
 ## Menos teclado. Más idea.
 

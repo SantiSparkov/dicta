@@ -20,14 +20,14 @@ El producto dicta texto. No inventamos integraciones oficiales, certificaciones,
 
 ## Sistema visual
 
-| Token | Valor | Uso |
-| --- | --- | --- |
-| Tinta | `#121510` | Fondo oscuro |
-| Panel | `#1B2018` | Superficies de trabajo |
-| Lima | `#C4ED79` | Acciones y marca |
-| Texto | `#F0F1E9` | Lectura principal |
-| Texto secundario | `#A9B19F` | Ayuda y contexto |
-| Borde | `#343B2E` | Separación |
+| Token            | Valor     | Uso                    |
+| ---------------- | --------- | ---------------------- |
+| Tinta            | `#121510` | Fondo oscuro           |
+| Panel            | `#1B2018` | Superficies de trabajo |
+| Lima             | `#C4ED79` | Acciones y marca       |
+| Texto            | `#F0F1E9` | Lectura principal      |
+| Texto secundario | `#A9B19F` | Ayuda y contexto       |
+| Borde            | `#343B2E` | Separación             |
 
 La web respeta también el tema claro del sistema con tinta sobre superficie `#F1F3EC`. En ese tema, los titulares de acento usan verde `#45651D` para contraste. La app arranca en oscuro y conserva el ajuste de apariencia.
 

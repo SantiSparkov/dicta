@@ -19,3 +19,7 @@ src-tauri/src/catalog/catalog.json
 # Misc
 .DS_Store
 *.log
+
+# Landing uses its own oxfmt configuration
+landing/
+.codegraph/
