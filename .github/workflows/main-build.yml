@@ -5,8 +5,7 @@ name: "Main Branch Build"
 # so any commit on main has a downloadable, testable build.
 
 on:
-  push:
-    branches: [main]
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -48,5 +47,5 @@ jobs:
       target: ${{ matrix.target }}
       build-args: ${{ matrix.args }}
       upload-artifacts: true
-      sign-binaries: true
+      sign-binaries: false
     secrets: inherit

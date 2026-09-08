@@ -1,4 +1,4 @@
-name: "Release"
+name: "Dicta · compilación de descarga"
 
 on: workflow_dispatch
 
@@ -31,7 +31,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               tag_name: `v${{ steps.get-version.outputs.version }}`,
-              name: `v${{ steps.get-version.outputs.version }}`,
+              name: `Dicta v${{ steps.get-version.outputs.version }}`,
               draft: true,
               prerelease: false,
               generate_release_notes: true
@@ -73,9 +73,9 @@ jobs:
       platform: ${{ matrix.platform }}
       target: ${{ matrix.target }}
       build-args: ${{ matrix.args }}
-      sign-binaries: true
-      asset-prefix: "handy"
-      upload-artifacts: false
+      sign-binaries: false
+      asset-prefix: "dicta"
+      upload-artifacts: true
       release-id: ${{ needs.create-release.outputs.release-id }}
       # Releases always build from scratch — never restore the Rust cache, so a
       # stale cached native lib can never be linked into a shipped artifact.

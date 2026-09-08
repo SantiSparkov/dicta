@@ -93,21 +93,25 @@ export const Sidebar: React.FC<SidebarProps> = ({
     .map(([id, config]) => ({ id: id as SidebarSection, ...config }));
 
   return (
-    <div className="flex flex-col w-40 h-full border-e border-mid-gray/20 items-center px-2">
-      <HandyTextLogo width={120} className="m-4" />
-      <div className="flex flex-col w-full items-center gap-1 pt-2 border-t border-mid-gray/20">
+    <aside className="dicta-sidebar">
+      <div className="dicta-sidebar-brand">
+        <HandyTextLogo width={140} />
+        <span className="dicta-eyebrow">{t("brand.category")}</span>
+      </div>
+      <nav
+        aria-label={t("brand.navigation")}
+        className="flex flex-col w-full gap-1"
+      >
         {availableSections.map((section) => {
           const Icon = section.icon;
           const isActive = activeSection === section.id;
 
           return (
-            <div
+            <button
+              type="button"
+              aria-current={isActive ? "page" : undefined}
               key={section.id}
-              className={`flex gap-2 items-center p-2 w-full rounded-lg cursor-pointer transition-colors ${
-                isActive
-                  ? "bg-logo-primary/80"
-                  : "hover:bg-mid-gray/20 hover:opacity-100 opacity-85"
-              }`}
+              className={`dicta-nav-item ${isActive ? "is-active" : ""}`}
               onClick={() => onSectionChange(section.id)}
             >
               <Icon width={24} height={24} className="shrink-0" />
@@ -117,10 +121,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
               >
                 {t(section.labelKey)}
               </p>
-            </div>
+            </button>
           );
         })}
+      </nav>
+      <div className="dicta-sidebar-note">
+        <HandyHand width={26} height={26} className="dicta-mini-wave" />
+        <p>{t("brand.sidebarNote")}</p>
       </div>
-    </div>
+    </aside>
   );
 };

@@ -31,20 +31,22 @@ const Onboarding: React.FC<OnboardingProps> = ({ onModelSelected }) => {
 
   const isBusy = selectedModelId !== null;
 
-  // Curate the download list: legacy (.bin/ONNX) downloads are deprecated and
-  // never shown here (they still appear in the compatible section if already on
-  // disk). The catalog arrives rank-sorted, so the first two recommended models
-  // are the featured picks — currently Parakeet Unified (English) and Nemotron
-  // Streaming (multilingual). Everything else hides behind "Show all".
+  // Keep supported model sources and prioritize Spanish-capable options.
   const { downloadable, topPicks, otherRecommended, rest } = useMemo(() => {
     const downloadable = models.filter(
       (m: ModelInfo) => !m.is_downloaded && !isLegacySource(m),
     );
-    const recommended = downloadable.filter((m: ModelInfo) => m.is_recommended);
+    // Dicta prioritizes models that actually declare Spanish support.
+    // Keep every other model available under the complete catalog.
+    const recommended = downloadable.filter((m: ModelInfo) =>
+      m.supported_languages.includes("es"),
+    );
     // `models` arrives in editorial rank order (the backend sorts by rank_of,
     // then accuracy), so keep that order here: ranked-but-not-recommended models
     // surface first, then the unranked tail by accuracy.
-    const rest = downloadable.filter((m: ModelInfo) => !m.is_recommended);
+    const rest = downloadable.filter(
+      (m: ModelInfo) => !recommended.includes(m),
+    );
     return {
       downloadable,
       topPicks: recommended.slice(0, 2),

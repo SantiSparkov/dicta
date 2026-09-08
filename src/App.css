@@ -105,3 +105,200 @@
   stroke: var(--color-logo-stroke);
   stroke-width: 1;
 }
+
+/* Dicta desktop: quiet controls, an unmistakable voice. */
+:root {
+  font-family:
+    "Avenir Next",
+    "Segoe UI",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  font-size: 14px;
+  --dicta-panel: color-mix(
+    in srgb,
+    var(--color-background),
+    var(--color-text) 4%
+  );
+}
+body {
+  margin: 0;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-logo-primary);
+  outline-offset: 3px;
+}
+.dicta-wordmark {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--color-logo-primary);
+  flex-shrink: 0;
+}
+.dicta-wordmark span {
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: -2.5px;
+  font-weight: 800;
+}
+.dicta-sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 198px;
+  flex-shrink: 0;
+  padding: 28px 13px 20px;
+  border-inline-end: 1px solid
+    color-mix(in srgb, var(--color-text) 10%, transparent);
+  background: var(--dicta-panel);
+}
+.dicta-sidebar-brand {
+  padding: 0 12px 30px;
+}
+.dicta-eyebrow {
+  display: block;
+  font:
+    10px/1.5 "SFMono-Regular",
+    Consolas,
+    monospace;
+  letter-spacing: 1.8px;
+  color: var(--color-mid-gray);
+}
+.dicta-sidebar-brand .dicta-eyebrow {
+  margin-top: 15px;
+}
+.dicta-nav-item {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  gap: 12px;
+  width: 100%;
+  min-height: 45px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  cursor: pointer;
+  color: var(--color-mid-gray);
+  transition:
+    color 140ms,
+    background-color 140ms;
+}
+.dicta-nav-item svg {
+  width: 19px;
+  height: 19px;
+}
+.dicta-nav-item:hover {
+  color: var(--color-text);
+  background: color-mix(in srgb, var(--color-text) 5%, transparent);
+}
+.dicta-nav-item.is-active {
+  background: color-mix(in srgb, var(--color-logo-primary) 12%, transparent);
+  border-color: color-mix(in srgb, var(--color-logo-primary) 20%, transparent);
+  color: var(--color-logo-primary);
+}
+.dicta-sidebar-note {
+  margin-top: auto;
+  padding: 28px 12px 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-mid-gray);
+  max-width: 140px;
+}
+.dicta-mini-wave {
+  color: var(--color-logo-primary);
+  font-size: 25px;
+  display: block;
+  margin-bottom: 10px;
+}
+.dicta-content {
+  padding: 34px clamp(20px, 4vw, 46px) 32px;
+}
+.dicta-page-header {
+  width: 100%;
+  max-width: 768px;
+  padding-bottom: 12px;
+}
+.dicta-page-header h1 {
+  font-size: clamp(24px, 3.3vw, 35px);
+  line-height: 1.13;
+  letter-spacing: -1.2px;
+  font-weight: 650;
+  max-width: 570px;
+  margin: 14px 0 12px;
+  text-wrap: balance;
+}
+.dicta-page-header > p:last-child {
+  max-width: 570px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--color-mid-gray);
+}
+.dicta-flow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 22px 0 25px;
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--color-text) 12%, transparent);
+}
+.dicta-step {
+  font:
+    11px/1.5 "SFMono-Regular",
+    Consolas,
+    monospace;
+  color: var(--color-logo-primary);
+}
+.dicta-flow h2 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 7px 0;
+}
+.dicta-flow p {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--color-mid-gray);
+}
+.dicta-settings-group {
+  background: var(--dicta-panel);
+}
+.dicta-footer {
+  background: var(--dicta-panel);
+}
+button.bg-logo-primary.text-white {
+  color: #121510;
+}
+@media (max-width: 700px) {
+  .dicta-sidebar {
+    width: 162px;
+    padding-inline: 8px;
+  }
+  .dicta-sidebar-brand {
+    padding-inline: 8px;
+  }
+  .dicta-wordmark span {
+    font-size: 34px;
+  }
+  .dicta-content {
+    padding: 25px 19px;
+  }
+  .dicta-flow {
+    gap: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

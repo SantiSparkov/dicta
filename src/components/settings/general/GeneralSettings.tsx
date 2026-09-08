@@ -19,6 +19,23 @@ export const GeneralSettings: React.FC = () => {
   const isLinux = type() === "linux";
   return (
     <div className="max-w-3xl w-full mx-auto space-y-6">
+      <section className="dicta-flow" aria-label={t("brand.flowTitle")}>
+        <div>
+          <span className="dicta-step">01</span>
+          <h2>{t("brand.flow.open")}</h2>
+          <p>{t("brand.flow.openDescription")}</p>
+        </div>
+        <div>
+          <span className="dicta-step">02</span>
+          <h2>{t("brand.flow.speak")}</h2>
+          <p>{t("brand.flow.speakDescription")}</p>
+        </div>
+        <div>
+          <span className="dicta-step">03</span>
+          <h2>{t("brand.flow.build")}</h2>
+          <p>{t("brand.flow.buildDescription")}</p>
+        </div>
+      </section>
       <SettingsGroup title={t("settings.general.title")}>
         <ShortcutInput shortcutId="transcribe" grouped={true} />
         <ShortcutActivationSetting descriptionMode="tooltip" grouped={true} />

@@ -306,7 +306,12 @@ function App() {
           {/* Scrollable content area */}
           <div className="flex-1 flex flex-col overflow-hidden">
             <div className="flex-1 overflow-y-auto">
-              <div className="flex flex-col items-center p-4 gap-4">
+              <div className="dicta-content flex flex-col items-center gap-4">
+                <header className="dicta-page-header">
+                  <p className="dicta-eyebrow">{t("brand.workspace")}</p>
+                  <h1>{t(`brand.sections.${currentSection}.title`)}</h1>
+                  <p>{t(`brand.sections.${currentSection}.description`)}</p>
+                </header>
                 <AccessibilityPermissions />
                 <SecureInputWarning />
                 {renderSettingsContent(currentSection)}

@@ -16,7 +16,7 @@ import { commands, type Theme } from "@/bindings";
  * avoiding a flash of the wrong palette.
  */
 
-export const THEME_STORAGE_KEY = "handy.theme";
+export const THEME_STORAGE_KEY = "dicta.theme";
 
 export const THEME_OPTIONS: Theme[] = ["system", "light", "dark"];
 
@@ -47,7 +47,7 @@ export const getStoredTheme = (): Theme => {
   } catch {
     // ignore
   }
-  return "system";
+  return "dark";
 };
 
 /** Apply the persisted theme from AppSettings (the source of truth). */

@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
   <key>NSMicrophoneUsageDescription</key>
-  <string>Request microphone access to transcribe audio locally</string>
+  <string>Dicta usa el micrófono para convertir tu voz en texto en tu computadora.</string>
 </dict>
 </plist>
