@@ -216,3 +216,11 @@ See the [Troubleshooting](README.md#troubleshooting) section in README.md.
 - **Full contributor workflow:** [CONTRIBUTING.md](CONTRIBUTING.md).
 
 **Commits:** Use conventional commit prefixes (`feat:`, `fix:`, `docs:`, `refactor:`, `chore:`). Focus the message on _why_, not _what_.
+
+## Dicta: CodeGraph
+
+Este proyecto está indexado con CodeGraph por pedido del propietario. Antes de localizar o comprender código, usa `codegraph_explore` pasando `projectPath` del repositorio o `codegraph explore "símbolos o pregunta"`. Si la consulta no encuentra configuración o documentación, usa lectura directa como fallback.
+
+La landing tiene su propio índice en `landing/.codegraph/`; para sus consultas pasa `projectPath` de `landing/`. Ejecuta `codegraph sync` después de cambios para refrescar el grafo. Las bases de datos son locales y no se versionan.
+
+El repositorio de trabajo es https://github.com/SantiSparkov/dicta (`origin`). Handy permanece como `upstream`. No publiques cambios al upstream.

@@ -47,3 +47,6 @@ result
 __pycache__/
 
 !landing/package-lock.json
+
+# Local distribution artifacts; publish through GitHub Releases
+/release-artifacts/
