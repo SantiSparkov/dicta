@@ -706,5 +706,56 @@
     "learnMore": "Så här löser du det",
     "recorderBlocked": "Det går inte att spela in kortkommandon just nu — macOS Secure Input blockerar tangenthändelser. Lös varningen om Secure Input först.",
     "dismiss": "Avfärda"
+  },
+  "brand": {
+    "name": "Dicta",
+    "wordmark": "dicta",
+    "category": "VOZ → PROMPT",
+    "navigation": "Navegación principal",
+    "workspace": "TU ESPACIO DE DICTADO",
+    "sidebarNote": "Menos teclado. Más ideas.",
+    "flowTitle": "De tu voz al editor",
+    "flow": {
+      "open": "Abre tu editor",
+      "openDescription": "Cursor, Claude o tu terminal. Deja el cursor donde va el texto.",
+      "speak": "Di lo que tienes en mente",
+      "speakDescription": "Usa tu atajo de dictado. Un prompt, un fix o esa idea que no quieres perder.",
+      "build": "Sigue construyendo",
+      "buildDescription": "Al terminar, Dicta transcribe y pega el texto en la app activa."
+    },
+    "sections": {
+      "general": {
+        "title": "Tu próximo commit empieza hablando.",
+        "description": "Configura tu atajo, abre tu editor y suelta la idea."
+      },
+      "history": {
+        "title": "Las ideas quedan.",
+        "description": "Vuelve a tus dictados, copia un prompt o escucha una grabación."
+      },
+      "models": {
+        "title": "El motor detrás de tu voz.",
+        "description": "Descarga un modelo compatible con español. La transcripción corre en tu equipo."
+      },
+      "advanced": {
+        "title": "A tu manera.",
+        "description": "Ajusta cómo Dicta se lleva con tu flujo de trabajo."
+      },
+      "postprocessing": {
+        "title": "Dale forma al prompt.",
+        "description": "Conecta un proveedor de IA para procesar el texto. Si es remoto, el texto sale de tu equipo."
+      },
+      "debug": {
+        "title": "Bajo el capó.",
+        "description": "Herramientas de diagnóstico para entender qué está pasando."
+      },
+      "about": {
+        "title": "Software abierto. Voz propia.",
+        "description": "Dicta nace de Handy y del trabajo de su comunidad open source."
+      }
+    },
+    "keyboard": {
+      "tauri": "Atajo global (Tauri)",
+      "native": "Motor nativo"
+    }
   }
 }
